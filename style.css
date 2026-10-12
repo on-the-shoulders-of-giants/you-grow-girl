@@ -1,0 +1,798 @@
+/* ==========================================================
+   Mes plantes — feuille de style commune à toutes les pages
+   ========================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --fond: #ecf1eb;
+  --surface: #f7faf5;
+  --encre: #1b2a22;
+  --encre-douce: #4f6157;
+  --ligne: #c7d3c9;
+  --feuille: #2d6847;
+  --feuille-pale: #d7e7db;
+  --alerte: #8a5d0b;
+  --titre: "Literata", Georgia, "Times New Roman", serif;
+  --texte: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --largeur: 74rem;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #111a15;
+    --surface: #18231d;
+    --encre: #e0e8e2;
+    --encre-douce: #a2b3a8;
+    --ligne: #2b3a31;
+    --feuille: #82c59e;
+    --feuille-pale: #1e3428;
+    --alerte: #e2b65c;
+    color-scheme: dark;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--encre);
+  font-family: var(--texte);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--feuille);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--feuille);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--titre);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+}
+
+.conteneur {
+  max-width: var(--largeur);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 40rem) {
+  .conteneur {
+    padding: 0 2rem;
+  }
+}
+
+.visuellement-cache {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- Motifs de feuilles ---------- */
+
+.motif {
+  background-color: var(--feuille);
+  background-repeat: repeat;
+}
+
+.motif-fittonia { background-image: url("motifs/fittonia.svg"); }
+.motif-begonia { background-image: url("motifs/begonia.svg"); }
+.motif-goeppertia { background-image: url("motifs/goeppertia.svg"); }
+.motif-pothos { background-image: url("motifs/pothos.svg"); }
+.motif-boutures { background-image: url("motifs/boutures.svg"); }
+
+/* ---------- En-tête ---------- */
+
+.entete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.marque {
+  font-family: var(--titre);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--encre);
+  text-decoration: none;
+}
+
+.nav-plantes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-plantes a {
+  color: var(--encre-douce);
+  text-decoration: none;
+  padding: 0.25rem 0;
+}
+
+.nav-plantes a:hover {
+  color: var(--encre);
+  text-decoration: underline;
+}
+
+.nav-plantes a[aria-current="page"] {
+  color: var(--encre);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--feuille);
+  text-decoration-thickness: 2px;
+}
+
+/* ---------- Accueil : la journée ---------- */
+
+.aujourdhui {
+  padding: 2rem 0 2.5rem;
+}
+
+.aujourdhui h1 {
+  font-size: clamp(2.4rem, 7vw, 4.25rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.resume {
+  max-width: 36rem;
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+  color: var(--encre-douce);
+}
+
+.alerte-stockage {
+  max-width: 40rem;
+  margin-top: 1rem;
+  color: var(--alerte);
+}
+
+/* ---------- Accueil : une ligne par plante ---------- */
+
+.lignes {
+  margin: 0;
+  padding: 0 0 3rem;
+  list-style: none;
+}
+
+.ligne {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  grid-template-areas:
+    "motif motif"
+    "photo infos"
+    "taches taches";
+  gap: 1rem 1.25rem;
+  padding: 0 0 2.25rem;
+}
+
+.ligne + .ligne {
+  padding-top: 0;
+}
+
+.ligne .motif {
+  grid-area: motif;
+  height: 0.9rem;
+  border-radius: 0.3rem;
+}
+
+.ligne-photo {
+  grid-area: photo;
+  align-self: start;
+}
+
+.ligne-infos {
+  grid-area: infos;
+}
+
+.ligne-taches {
+  grid-area: taches;
+}
+
+.ligne h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.ligne h2 a {
+  color: var(--encre);
+  text-decoration-color: var(--ligne);
+  text-decoration-thickness: 2px;
+}
+
+.ligne h2 a:hover {
+  text-decoration-color: var(--feuille);
+}
+
+.ligne-sous-titre {
+  margin-top: 0.3rem;
+  color: var(--encre-douce);
+}
+
+.consignes {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1rem 0 0;
+}
+
+.consignes div {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.consignes dt {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--encre-douce);
+}
+
+.consignes dd {
+  margin: 0;
+}
+
+.ligne-progres {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  color: var(--encre-douce);
+}
+
+.ligne-progres.est-complet {
+  color: var(--feuille);
+  font-weight: 700;
+}
+
+@media (min-width: 48rem) {
+  .ligne {
+    grid-template-columns: 0.75rem 9rem minmax(0, 1fr);
+    grid-template-areas:
+      "motif photo infos"
+      "motif photo taches";
+    gap: 1.25rem 1.75rem;
+    padding: 2.25rem 0;
+    border-top: 1px solid var(--ligne);
+  }
+
+  .ligne + .ligne {
+    padding-top: 2.25rem;
+  }
+
+  .ligne .motif {
+    height: auto;
+    border-radius: 0.375rem;
+  }
+}
+
+@media (min-width: 68rem) {
+  .ligne {
+    grid-template-columns: 0.75rem 10.5rem minmax(0, 1fr) minmax(19rem, 24rem);
+    grid-template-areas: "motif photo infos taches";
+    gap: 2.25rem;
+  }
+
+  .consignes {
+    max-width: 34rem;
+  }
+}
+
+/* ---------- Photos ---------- */
+
+.photo {
+  margin: 0;
+}
+
+.cadre {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 0.75rem;
+  background: var(--feuille-pale);
+}
+
+.cadre img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo.vide .cadre img {
+  display: none;
+}
+
+.photo.vide .cadre::after {
+  content: attr(data-vide);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0.75rem;
+  border: 2px dashed var(--ligne);
+  border-radius: inherit;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--encre-douce);
+  overflow-wrap: anywhere;
+}
+
+.photo figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--encre-douce);
+}
+
+.photo.vide .credit {
+  display: none;
+}
+
+/* ---------- Todo lists ---------- */
+
+.taches-groupe + .taches-groupe {
+  margin-top: 1.25rem;
+}
+
+.taches-titre {
+  margin-bottom: 0.4rem;
+  font-family: var(--texte);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--encre-douce);
+}
+
+.taches-vide {
+  padding: 0.35rem 0;
+  color: var(--encre-douce);
+}
+
+.taches-liste {
+  display: grid;
+  gap: 0.15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tache {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin: 0 -0.5rem;
+  padding: 0.45rem 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.tache:hover {
+  background: var(--feuille-pale);
+}
+
+.tache input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+}
+
+.case {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 1.375rem;
+  height: 1.375rem;
+  margin-top: 0.08rem;
+  border: 2px solid var(--feuille);
+  border-radius: 0.4rem;
+  background: var(--surface);
+  transition: background-color 0.15s ease;
+}
+
+.case::after {
+  content: "";
+  width: 0.375rem;
+  height: 0.7rem;
+  margin-top: -0.15rem;
+  border: solid var(--surface);
+  border-width: 0 0.17rem 0.17rem 0;
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.15s ease;
+}
+
+.tache input:checked + .case {
+  background: var(--feuille);
+}
+
+.tache input:checked + .case::after {
+  transform: rotate(45deg) scale(1);
+}
+
+.tache input:focus-visible + .case {
+  outline: 3px solid var(--feuille);
+  outline-offset: 2px;
+}
+
+.tache input:checked ~ .tache-texte {
+  color: var(--encre-douce);
+  text-decoration: line-through;
+  text-decoration-color: var(--feuille);
+}
+
+.tache-multiple {
+  padding: 0.45rem 0;
+}
+
+.tache-multiple > .tache-texte {
+  display: block;
+}
+
+.tache-fois {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin-top: 0.15rem;
+}
+
+.tache-pastille {
+  margin: 0;
+  padding: 0.3rem 0.5rem 0.3rem 0;
+}
+
+.tache-pastille .tache-texte {
+  font-size: 0.9375rem;
+}
+
+/* ---------- Page d'une plante ---------- */
+
+.bandeau {
+  height: clamp(4.5rem, 12vw, 8rem);
+}
+
+.titre-plante {
+  padding: 2rem 0 2rem;
+}
+
+.titre-plante h1 {
+  font-size: clamp(2.25rem, 6.5vw, 3.75rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.nom-commun {
+  margin-top: 0.4rem;
+  font-family: var(--titre);
+  font-size: 1.3rem;
+  color: var(--encre-douce);
+}
+
+.chapeau {
+  max-width: 40rem;
+  margin-top: 1rem;
+  font-size: 1.1875rem;
+}
+
+.plante-haut {
+  display: grid;
+  gap: 2rem;
+}
+
+.plante-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-self: start;
+}
+
+.plante-fiche {
+  display: grid;
+  gap: 2.25rem;
+}
+
+.plante-fiche h2,
+.section h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.fiche {
+  margin: 0.9rem 0 0;
+}
+
+.fiche div {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--ligne);
+}
+
+.fiche dt {
+  font-weight: 700;
+  color: var(--encre-douce);
+}
+
+.fiche dd {
+  margin: 0;
+  max-width: 40rem;
+}
+
+@media (min-width: 40rem) {
+  .fiche div {
+    grid-template-columns: 9.5rem minmax(0, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .plante-haut {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 3rem;
+  }
+
+  .plante-photos {
+    position: sticky;
+    top: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+.section {
+  margin-top: 3.5rem;
+}
+
+.section-note {
+  max-width: 40rem;
+  margin-top: 0.4rem;
+  color: var(--encre-douce);
+}
+
+.colonnes-taches {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+  .colonnes-taches {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 2.5rem;
+  }
+
+  .colonnes-taches .taches-groupe + .taches-groupe {
+    margin-top: 0;
+  }
+}
+
+/* ---------- Problèmes fréquents (toggle) ---------- */
+
+.problemes {
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--ligne);
+  border-bottom: 1px solid var(--ligne);
+}
+
+.problemes summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.problemes summary::-webkit-details-marker {
+  display: none;
+}
+
+.problemes summary h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.problemes-compte {
+  color: var(--encre-douce);
+  font-family: var(--texte);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.chevron {
+  flex: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-right: 0.25rem;
+  border: solid var(--encre);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.problemes[open] .chevron {
+  transform: rotate(-135deg);
+}
+
+.problemes-liste {
+  display: grid;
+  gap: 0;
+  padding-bottom: 1.5rem;
+}
+
+.probleme {
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--ligne);
+}
+
+.probleme h3 {
+  font-family: var(--texte);
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.probleme p {
+  max-width: 44rem;
+  margin-top: 0.35rem;
+}
+
+.etiquette {
+  font-weight: 700;
+  color: var(--alerte);
+}
+
+@media (min-width: 60rem) {
+  .problemes-liste {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+  }
+}
+
+/* ---------- Boutures ---------- */
+
+.etapes {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 44rem;
+  margin: 1rem 0 0;
+  padding-left: 1.4rem;
+}
+
+.etapes li::marker {
+  font-family: var(--titre);
+  font-weight: 600;
+  color: var(--feuille);
+}
+
+.suivi-liste {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.suivi-bouture {
+  margin: 0;
+  padding: 1rem 0 0.25rem;
+  border: 0;
+  border-top: 1px solid var(--ligne);
+}
+
+.suivi-bouture legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.suivi-champs {
+  clear: both;
+  display: grid;
+  gap: 0.6rem 1.25rem;
+}
+
+@media (min-width: 30rem) {
+  .suivi-champs {
+    grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
+  }
+}
+
+.suivi-champs label {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.9375rem;
+  color: var(--encre-douce);
+}
+
+.suivi-champs input {
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--ligne);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--encre);
+  font: inherit;
+}
+
+.suivi-destination {
+  margin-top: 0.6rem;
+  font-size: 0.9375rem;
+  color: var(--encre-douce);
+}
+
+/* ---------- Sources et pied de page ---------- */
+
+.sources {
+  margin-top: 3rem;
+  font-size: 0.9375rem;
+  color: var(--encre-douce);
+}
+
+.sources h2 {
+  font-family: var(--texte);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.sources ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.pied {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  padding-bottom: 2.5rem;
+  border-top: 1px solid var(--ligne);
+  font-size: 0.9375rem;
+  color: var(--encre-douce);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case,
+  .case::after,
+  .chevron {
+    transition: none;
+  }
+}

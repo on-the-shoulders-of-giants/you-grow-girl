@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mes plantes</title>
+  <meta name="description" content="Ce dont chaque plante a besoin, et ce qu'il y a à faire cette semaine.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,600;0,700;1,400family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literatafamily=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="entete conteneur">
+    <a class="marque" href="index.html">Mes plantes</a>
+    <nav aria-label="Pages des plantes">
+      <ul class="nav-plantes">
+        <li><a href="fittonia.html">Fittonia</a></li>
+        <li><a href="begonia.html">Bégonia</a></li>
+        <li><a href="goeppertia.html">Goeppertia</a></li>
+        <li><a href="pothos.html">Pothos</a></li>
+        <li><a href="boutures.html">Boutures</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="conteneur">
+
+    <section class="aujourdhui" aria-labelledby="titre-jour">
+      <h1 id="titre-jour" data-date>Aujourd'hui</h1>
+      <p class="resume" data-resume>Ce dont chaque plante a besoin, et ce qu'il y a à faire cette semaine.</p>
+      <p class="alerte-stockage" data-alerte-stockage hidden>
+        Ce navigateur n'enregistre pas les coches : elles disparaîtront si tu recharges la page.
+        Vérifie que tu n'es pas en navigation privée.
+      </p>
+    </section>
+
+    <ol class="lignes" aria-label="Mes plantes">
+
+      <!-- ===== Fittonia ===== -->
+      <li class="ligne" id="fittonia">
+        <div class="motif motif-fittonia" aria-hidden="true"></div>
+        <figure class="photo ligne-photo">
+          <div class="cadre" data-vide="Ta photo : images/fittonia-moi.jpg">
+            <img src="images/fittonia-moi.jpg" alt="Ma Fittonia" loading="lazy"
+                 onerror="if(!this.dataset.essai){this.dataset.essai='1';this.src='images/fittonia-internet.jpg';}else{this.closest('figure').classList.add('vide');}">
+          </div>
+        </figure>
+        <div class="ligne-infos">
+          <h2><a href="fittonia.html"><i>Fittonia albivenis</i></a></h2>
+          <p class="ligne-sous-titre">Fittonia. Difficulté moyenne.</p>
+          <dl class="consignes">
+            <div><dt>Lumière</dt><dd>Vive sans soleil direct ; tolère la mi-ombre.</dd></div>
+            <div><dt>Arrosage (automne-hiver)</dt><dd>Terre toujours légèrement humide, environ 1 à 2 fois par semaine.</dd></div>
+            <div><dt>Point clé</dt><dd>S'affaisse dès qu'elle a soif ; aime l'air humide.</dd></div>
+          </dl>
+          <p class="ligne-progres" data-resume-plante="fittonia"></p>
+        </div>
+        <div class="ligne-taches" data-taches="fittonia" data-niveau="3"></div>
+      </li>
+
+      <!-- ===== Begonia maculata ===== -->
+      <li class="ligne" id="begonia">
+        <div class="motif motif-begonia" aria-hidden="true"></div>
+        <figure class="photo ligne-photo">
+          <div class="cadre" data-vide="Ta photo : images/begonia-moi.jpg">
+            <img src="images/begonia-moi.jpg" alt="Mon Begonia maculata" loading="lazy"
+                 onerror="if(!this.dataset.essai){this.dataset.essai='1';this.src='images/begonia-internet.jpg';}else{this.closest('figure').classList.add('vide');}">
+          </div>
+        </figure>
+        <div class="ligne-infos">
+          <h2><a href="begonia.html"><i>Begonia maculata</i></a></h2>
+          <p class="ligne-sous-titre">Bégonia tacheté. Difficulté moyenne.</p>
+          <dl class="consignes">
+            <div><dt>Lumière</dt><dd>Très vive ; soleil doux du matin possible.</dd></div>
+            <div><dt>Arrosage (automne-hiver)</dt><dd>Quand les 2 à 3 premiers cm sont secs, environ tous les 10 à 14 jours.</dd></div>
+            <div><dt>Point clé</dt><dd>Craint l'excès d'eau ; ne pas brumiser les feuilles.</dd></div>
+          </dl>
+          <p class="ligne-progres" data-resume-plante="begonia"></p>
+        </div>
+        <div class="ligne-taches" data-taches="begonia" data-niveau="3"></div>
+      </li>
+
+      <!-- ===== Goeppertia makoyana ===== -->
+      <li class="ligne" id="goeppertia">
+        <div class="motif motif-goeppertia" aria-hidden="true"></div>
+        <figure class="photo ligne-photo">
+          <div class="cadre" data-vide="Ta photo : images/goeppertia-moi.jpg">
+            <img src="images/goeppertia-moi.jpg" alt="Ma Goeppertia makoyana" loading="lazy"
+                 onerror="if(!this.dataset.essai){this.dataset.essai='1';this.src='images/goeppertia-internet.jpg';}else{this.closest('figure').classList.add('vide');}">
+          </div>
+        </figure>
+        <div class="ligne-infos">
+          <h2><a href="goeppertia.html"><i>Goeppertia makoyana</i></a></h2>
+          <p class="ligne-sous-titre">Plante paon, ex-<i>Calathea</i>. Difficulté élevée.</p>
+          <dl class="consignes">
+            <div><dt>Lumière</dt><dd>Mi-ombre ; jamais de soleil direct.</dd></div>
+            <div><dt>Arrosage (automne-hiver)</dt><dd>Terre toujours légèrement humide, eau non calcaire, environ tous les 7 à 10 jours.</dd></div>
+            <div><dt>Point clé</dt><dd>La plus exigeante : air humide et eau douce.</dd></div>
+          </dl>
+          <p class="ligne-progres" data-resume-plante="goeppertia"></p>
+        </div>
+        <div class="ligne-taches" data-taches="goeppertia" data-niveau="3"></div>
+      </li>
+
+      <!-- ===== Pothos silver ===== -->
+      <li class="ligne" id="pothos">
+        <div class="motif motif-pothos" aria-hidden="true"></div>
+        <figure class="photo ligne-photo">
+          <div class="cadre" data-vide="Ta photo : images/pothos-moi.jpg">
+            <img src="images/pothos-moi.jpg" alt="Mon pothos silver" loading="lazy"
+                 onerror="if(!this.dataset.essai){this.dataset.essai='1';this.src='images/pothos-internet.jpg';}else{this.closest('figure').classList.add('vide');}">
+          </div>
+        </figure>
+        <div class="ligne-infos">
+          <h2><a href="pothos.html"><i>Scindapsus pictus</i></a></h2>
+          <p class="ligne-sous-titre">Pothos silver. Facile.</p>
+          <dl class="consignes">
+            <div><dt>Lumière</dt><dd>Vive sans soleil direct fort.</dd></div>
+            <div><dt>Arrosage (automne-hiver)</dt><dd>Quand la moitié supérieure de la terre est sèche, environ tous les 10 à 20 jours.</dd></div>
+            <div><dt>Point clé</dt><dd>Plus de lumière donne des tiges plus compactes.</dd></div>
+          </dl>
+          <p class="ligne-progres" data-resume-plante="pothos"></p>
+        </div>
+        <div class="ligne-taches" data-taches="pothos" data-niveau="3"></div>
+      </li>
+
+      <!-- ===== Boutures ===== -->
+      <li class="ligne" id="boutures">
+        <div class="motif motif-boutures" aria-hidden="true"></div>
+        <figure class="photo ligne-photo">
+          <div class="cadre" data-vide="Ta photo : images/boutures-moi.jpg">
+            <img src="images/boutures-moi.jpg" alt="Mes boutures dans l'eau" loading="lazy"
+                 onerror="this.closest('figure').classList.add('vide');">
+          </div>
+        </figure>
+        <div class="ligne-infos">
+          <h2><a href="boutures.html">Boutures</a></h2>
+          <p class="ligne-sous-titre">Pothos et bégonia, dans l'eau et épinglées.</p>
+          <dl class="consignes">
+            <div><dt>Lumière</dt><dd>Vive sans soleil direct.</dd></div>
+            <div><dt>Eau</dt><dd>La changer 1 à 2 fois par semaine.</dd></div>
+            <div><dt>Point clé</dt><dd>Le nœud doit toujours rester dans l'eau.</dd></div>
+          </dl>
+          <p class="ligne-progres" data-resume-plante="boutures"></p>
+        </div>
+        <div class="ligne-taches" data-taches="boutures" data-niveau="3"></div>
+      </li>
+
+    </ol>
+
+    <footer class="pied">
+      Conseils pour l'automne-hiver (octobre à mars). Les coches sont enregistrées sur cet appareil
+      et se remettent à zéro chaque jour et chaque lundi.
+    </footer>
+  </main>
+
+  <script src="taches.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

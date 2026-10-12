@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boutures — Mes plantes</title>
+  <meta name="description" content="Suivi des boutures de pothos silver et de bégonia : étapes, tâches et problèmes fréquents.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,600;0,700;1,400&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="entete conteneur">
+    <a class="marque" href="index.html">Mes plantes</a>
+    <nav aria-label="Pages des plantes">
+      <ul class="nav-plantes">
+        <li><a href="fittonia.html">Fittonia</a></li>
+        <li><a href="begonia.html">Bégonia</a></li>
+        <li><a href="goeppertia.html">Goeppertia</a></li>
+        <li><a href="pothos.html">Pothos</a></li>
+        <li><a href="boutures.html" aria-current="page">Boutures</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="bandeau motif motif-boutures" aria-hidden="true"></div>
+
+  <main class="conteneur">
+
+    <div class="titre-plante">
+      <h1>Boutures</h1>
+      <p class="nom-commun">Pothos silver et <i>Begonia maculata</i>.</p>
+      <p class="chapeau">Tronçons de pothos et tiges de bégonia dans l'eau, plus les tiges de pothos épinglées sur son pot. Les racines mettent quelques semaines à apparaître, plus lentement en automne-hiver.</p>
+    </div>
+
+    <div class="plante-haut">
+
+      <!-- Photos -->
+      <div class="plante-photos">
+        <figure class="photo">
+          <div class="cadre" data-vide="Ta photo : images/boutures-moi.jpg">
+            <img src="images/boutures-moi.jpg" alt="Mes boutures dans l'eau" onerror="this.closest('figure').classList.add('vide');">
+          </div>
+          <figcaption>Mes boutures. Une photo par semaine permet de comparer la pousse des racines.</figcaption>
+        </figure>
+        <figure class="photo">
+          <div class="cadre" data-vide="Photo facultative : images/boutures-internet.jpg">
+            <img src="images/boutures-internet.jpg" alt="Une bouture racinée dans l'eau" onerror="this.closest('figure').classList.add('vide');">
+          </div>
+          <figcaption>
+            Une bouture bien racinée.
+            <!-- À COMPLÉTER : remplace par l'auteur et la licence indiqués sur la page du fichier -->
+            <span class="credit">Photo : auteur, licence, via <a href="https://commons.wikimedia.org/w/index.php?search=pothos+cutting&title=Special%3AMediaSearch&type=image">Wikimedia Commons</a>.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Suivi et conditions -->
+      <div class="plante-fiche">
+        <section aria-labelledby="titre-suivi">
+          <h2 id="titre-suivi">Suivi</h2>
+          <p class="section-note">Les dates sont enregistrées sur cet appareil.</p>
+          <div class="suivi-liste">
+            <fieldset class="suivi-bouture">
+              <legend>Pothos silver, tronçons dans l'eau</legend>
+              <div class="suivi-champs">
+                <label>Mise en eau le <input type="date" data-suivi="pothos-eau-mise"></label>
+                <label>Premières racines le <input type="date" data-suivi="pothos-eau-racines"></label>
+                <label>Plantés le <input type="date" data-suivi="pothos-eau-plantes"></label>
+              </div>
+              <p class="suivi-destination">Destination : le pot du pothos, pour l'épaissir.</p>
+            </fieldset>
+            <fieldset class="suivi-bouture">
+              <legend>Pothos silver, tiges épinglées</legend>
+              <div class="suivi-champs">
+                <label>Épinglées le <input type="date" data-suivi="pothos-epingle-mise"></label>
+                <label>Enracinées le <input type="date" data-suivi="pothos-epingle-racines"></label>
+                <label>Tiges coupées le <input type="date" data-suivi="pothos-epingle-coupees"></label>
+              </div>
+              <p class="suivi-destination">Destination : restent dans le pot du pothos.</p>
+            </fieldset>
+            <fieldset class="suivi-bouture">
+              <legend><i>Begonia maculata</i>, tiges dans l'eau</legend>
+              <div class="suivi-champs">
+                <label>Mise en eau le <input type="date" data-suivi="begonia-eau-mise"></label>
+                <label>Premières racines le <input type="date" data-suivi="begonia-eau-racines"></label>
+                <label>Plantées le <input type="date" data-suivi="begonia-eau-plantees"></label>
+              </div>
+              <p class="suivi-destination">Destination : 3 ou 4 ensemble dans un même pot.</p>
+            </fieldset>
+          </div>
+        </section>
+
+        <section aria-labelledby="titre-conditions">
+          <h2 id="titre-conditions">Conditions idéales</h2>
+          <dl class="fiche">
+            <div><dt>Lumière</dt><dd>Vive sans soleil direct : au soleil, l'eau chauffe et verdit.</dd></div>
+            <div><dt>Température</dt><dd>18 à 24 °C. Éviter le rebord d'une fenêtre froide la nuit.</dd></div>
+            <div><dt>Eau</dt><dd>À température ambiante. Bégonia : la changer tous les 3 à 4 jours, ses tiges pourrissent vite. Pothos : une fois par semaine.</dd></div>
+            <div><dt>Plusieurs boutures par verre</dt><dd>Possible si elles ne sont pas serrées. Retirer tout de suite une bouture qui pourrit, elle contaminerait les autres.</dd></div>
+            <div><dt>Plantation du pothos</dt><dd>Dans le pot de la plante mère, en terreau aéré, pour la rendre plus fournie.</dd></div>
+            <div><dt>Plantation du bégonia</dt><dd>3 ou 4 boutures ensemble dans un petit pot, en terreau drainant.</dd></div>
+            <div><dt>Tiges épinglées enracinées</dt><dd>Couper la tige entre les nœuds enracinés : chaque morceau devient une petite plante et fait de nouvelles tiges.</dd></div>
+          </dl>
+        </section>
+      </div>
+    </div>
+
+    <!-- Étapes -->
+    <section class="section" aria-labelledby="titre-etapes">
+      <h2 id="titre-etapes">Les étapes</h2>
+      <ol class="etapes">
+        <li><strong>Mise en eau ou épinglage.</strong> Pothos : nœud dans l'eau, feuille dehors. Bégonia : 1 ou 2 nœuds dans l'eau, aucune feuille dans l'eau. Tiges épinglées : nœud fixé au contact de la terre.</li>
+        <li><strong>Racines visibles.</strong> Compter quelques semaines, davantage en hiver.</li>
+        <li><strong>Plantation,</strong> quand les racines font 2 à 5 cm. Pour une tige épinglée, c'est enraciné quand elle résiste si on tire très doucement.</li>
+        <li><strong>Reprise.</strong> Les 2 à 3 premières semaines en terre, garder le terreau humide sans le détremper, en lumière indirecte. Quelques feuilles molles sont normales : les racines nées dans l'eau doivent s'adapter à la terre.</li>
+      </ol>
+    </section>
+
+    <!-- Todo list -->
+    <section class="section" aria-labelledby="titre-a-faire">
+      <h2 id="titre-a-faire">À faire</h2>
+      <p class="section-note">Ce sont les mêmes cases que sur la page d'accueil.</p>
+      <p class="alerte-stockage" data-alerte-stockage hidden>Ce navigateur n'enregistre pas les coches.</p>
+      <div class="colonnes-taches" data-taches="boutures" data-niveau="3"></div>
+    </section>
+
+    <!-- Problèmes fréquents -->
+    <details class="problemes">
+      <summary>
+        <h2>Problèmes fréquents <span class="problemes-compte">(7)</span></h2>
+        <span class="chevron" aria-hidden="true"></span>
+      </summary>
+      <div class="problemes-liste">
+        <article class="probleme">
+          <h3>Tige qui noircit ou devient molle dans l'eau</h3>
+          <p><span class="etiquette">Cause probable :</span> pourriture, souvent due à une eau qui stagne.</p>
+          <p><span class="etiquette">Que faire :</span> couper au-dessus de la partie noire s'il reste un nœud sain, remettre dans un verre propre ; sinon jeter.</p>
+        </article>
+        <article class="probleme">
+          <h3>Eau trouble ou malodorante</h3>
+          <p><span class="etiquette">Cause probable :</span> bactéries.</p>
+          <p><span class="etiquette">Que faire :</span> changer l'eau, rincer le verre, changer plus souvent.</p>
+        </article>
+        <article class="probleme">
+          <h3>Pas de racines après 6 à 8 semaines</h3>
+          <p><span class="etiquette">Cause probable :</span> normal en hiver ; sinon nœud hors de l'eau, manque de lumière ou froid.</p>
+          <p><span class="etiquette">Que faire :</span> vérifier que le nœud est immergé, déplacer dans un endroit plus lumineux et plus chaud.</p>
+        </article>
+        <article class="probleme">
+          <h3>La feuille de la bouture jaunit</h3>
+          <p><span class="etiquette">Cause probable :</span> la bouture puise dans ses réserves ; parfois pourriture.</p>
+          <p><span class="etiquette">Que faire :</span> un jaunissement lent est normal ; retirer la feuille si elle pourrit.</p>
+        </article>
+        <article class="probleme">
+          <h3>Algues vertes dans le verre</h3>
+          <p><span class="etiquette">Cause probable :</span> lumière sur l'eau.</p>
+          <p><span class="etiquette">Que faire :</span> pas grave : changer l'eau plus souvent ou utiliser un verre opaque.</p>
+        </article>
+        <article class="probleme">
+          <h3>Bouture qui flétrit après la plantation</h3>
+          <p><span class="etiquette">Cause probable :</span> passage de l'eau à la terre.</p>
+          <p><span class="etiquette">Que faire :</span> garder la terre humide 2 à 3 semaines, lumière indirecte, pas d'engrais.</p>
+        </article>
+        <article class="probleme">
+          <h3>Tige épinglée qui ne s'enracine pas</h3>
+          <p><span class="etiquette">Cause probable :</span> nœud pas en contact avec la terre, ou surface trop sèche.</p>
+          <p><span class="etiquette">Que faire :</span> repositionner l'épingle, humidifier la surface ; être patiente en hiver.</p>
+        </article>
+      </div>
+    </details>
+
+    <footer class="pied">
+      Conseils pour l'automne-hiver (octobre à mars). Les coches et les dates sont enregistrées sur cet appareil ;
+      les coches se remettent à zéro chaque jour et chaque lundi.
+    </footer>
+  </main>
+
+  <script src="taches.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
