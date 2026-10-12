@@ -1,0 +1,21 @@
+Mets tes photos dans ce dossier, en JPG, avec exactement ces noms :
+
+Tes photos :
+  fittonia-moi.jpg
+  begonia-moi.jpg
+  goeppertia-moi.jpg
+  pothos-moi.jpg
+  boutures-moi.jpg
+
+Photos d'internet (une plante en bonne santé) :
+  fittonia-internet.jpg
+  begonia-internet.jpg
+  goeppertia-internet.jpg
+  pothos-internet.jpg
+  boutures-internet.jpg   (facultative)
+
+Une photo absente laisse un cadre vide avec son nom : le site reste utilisable.
+Sur l'accueil, si ta photo manque, c'est la photo d'internet qui s'affiche.
+
+Pour chaque photo d'internet, remplace "auteur, licence" par le vrai crédit
+dans la page HTML de la plante (cherche "À COMPLÉTER").
