@@ -1,5 +1,5 @@
 /* ==========================================================
-   Mes plantes — feuille de style commune à toutes les pages
+   You grow girl — feuille de style commune à toutes les pages
    ========================================================== */
 
 *,
@@ -522,7 +522,7 @@ p {
 
 .plante-photos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
   align-self: start;
 }
