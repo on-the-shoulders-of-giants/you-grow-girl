@@ -1,0 +1,17 @@
+Mets les photos des plantes de la coloc dans ce dossier, en JPG, avec exactement ces noms :
+
+  tradescantia-fluminensis.jpg
+  tradescantia-pallida.jpg
+  beaucarnea.jpg
+  dracaena.jpg
+  anthurium.jpg
+  yucca.jpg
+
+Une photo absente laisse un cadre vide avec son nom : le site reste utilisable.
+
+Avant de prendre les photos, désactive la localisation dans les réglages de l'appareil photo :
+sinon chaque photo contient les coordonnées GPS de la coloc, lisibles par n'importe qui
+une fois le site en ligne.
+
+Les photos de téléphone pèsent souvent 3 à 4 Mo. Une version réduite (environ 1600 pixels
+de large) suffit et rend le site plus rapide sur téléphone.
