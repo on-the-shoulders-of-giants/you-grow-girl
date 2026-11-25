@@ -276,10 +276,11 @@ p {
 
 .ligne {
   display: grid;
-  grid-template-columns: 6.5rem minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
-    "photo infos"
-    "taches taches";
+    "photo"
+    "infos"
+    "taches";
   gap: 1rem 1.25rem;
   padding: 1.75rem 0;
   border-top: 1px solid var(--ligne);
@@ -288,6 +289,8 @@ p {
 .ligne-photo {
   grid-area: photo;
   align-self: start;
+  width: 100%;
+  max-width: 26rem;
 }
 
 .ligne-infos {
@@ -353,7 +356,7 @@ p {
 
 @media (min-width: 48rem) {
   .ligne {
-    grid-template-columns: 9rem minmax(0, 1fr);
+    grid-template-columns: 17rem minmax(0, 1fr);
     grid-template-areas:
       "photo infos"
       "photo taches";
@@ -369,7 +372,7 @@ p {
 
 @media (min-width: 68rem) {
   .ligne {
-    grid-template-columns: 10.5rem minmax(0, 1fr) minmax(19rem, 24rem);
+    grid-template-columns: 21rem minmax(0, 1fr) minmax(17rem, 22rem);
     grid-template-areas: "photo infos taches";
     gap: 2.25rem;
   }

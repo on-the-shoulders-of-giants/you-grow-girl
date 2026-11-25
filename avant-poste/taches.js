@@ -18,9 +18,7 @@ window.TACHES = {
     jour: [],
     jourVide: "Rien de quotidien.",
     semaine: [
-      { id: "tfl-terre", texte: "Toucher la terre : si les 2 premiers centimètres sont secs, arroser, puis vider la soucoupe", fois: 2 },
-      { id: "tfl-pointes", texte: "Regarder les pointes des feuilles : si elles sèchent, éloigner la plante du radiateur" },
-      { id: "tfl-pincer", texte: "Pincer le bout des tiges qui s'allongent (les morceaux se bouturent facilement)" }
+      { id: "tfl-terre", texte: "Toucher la terre : si les 2 premiers centimètres sont secs, arroser, puis vider la soucoupe", fois: 2 }
     ]
   },
 
@@ -28,9 +26,7 @@ window.TACHES = {
     jour: [],
     jourVide: "Rien : elle supporte mieux un oubli qu'un excès d'eau.",
     semaine: [
-      { id: "tpa-terre", texte: "Toucher la terre : si elle a visiblement séché, arroser abondamment jusqu'à ce que l'eau s'écoule par le fond" },
-      { id: "tpa-couleur", texte: "Regarder sa couleur : si elle verdit, la rapprocher d'une fenêtre ensoleillée" },
-      { id: "tpa-pincer", texte: "Pincer les tiges trop longues (avec des gants si ta peau est sensible)" }
+      { id: "tpa-terre", texte: "Toucher la terre : si elle a visiblement séché, arroser abondamment jusqu'à ce que l'eau s'écoule par le fond" }
     ]
   },
 
@@ -58,8 +54,6 @@ window.TACHES = {
     jourVide: "Rien de quotidien.",
     semaine: [
       { id: "ant-terre", texte: "Toucher la terre : si le dessus a un peu séché, arroser avec de l'eau non calcaire", fois: 2 },
-      { id: "ant-eau", texte: "Préparer l'eau d'arrosage (filtrée ou de pluie) et la laisser à température ambiante" },
-      { id: "ant-humidite", texte: "Remettre de l'eau dans la soucoupe de billes, ou la garder regroupée avec d'autres plantes" },
       { id: "ant-radiateur", texte: "Vérifier qu'elle est loin des radiateurs et des courants d'air froids" },
       { id: "ant-fleurs", texte: "Retirer les fleurs fanées" }
     ]
