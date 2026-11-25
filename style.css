@@ -130,26 +130,6 @@ p {
   white-space: nowrap;
 }
 
-/* ---------- Motifs de feuilles ---------- */
-
-.motif {
-  background-color: var(--feuille);
-  background-repeat: repeat;
-}
-
-.motif-fittonia { background-image: url("motifs/fittonia.svg"); }
-.motif-begonia { background-image: url("motifs/begonia.svg"); }
-.motif-goeppertia { background-image: url("motifs/goeppertia.svg"); }
-.motif-pothos { background-image: url("motifs/pothos.svg"); }
-.motif-boutures { background-image: url("motifs/boutures.svg"); }
-
-.motif-tradescantia-fluminensis { background-image: url("avant-poste/motifs/tradescantia-fluminensis.svg"); }
-.motif-tradescantia-pallida { background-image: url("avant-poste/motifs/tradescantia-pallida.svg"); }
-.motif-beaucarnea { background-image: url("avant-poste/motifs/beaucarnea.svg"); }
-.motif-dracaena { background-image: url("avant-poste/motifs/dracaena.svg"); }
-.motif-anthurium { background-image: url("avant-poste/motifs/anthurium.svg"); }
-.motif-yucca { background-image: url("avant-poste/motifs/yucca.svg"); }
-
 /* ---------- En-tête ---------- */
 
 .entete {
@@ -567,10 +547,6 @@ p {
 }
 
 /* ---------- Page d'une plante ---------- */
-
-.bandeau {
-  height: clamp(4.5rem, 12vw, 8rem);
-}
 
 .titre-plante {
   padding: 2rem 0 2rem;
