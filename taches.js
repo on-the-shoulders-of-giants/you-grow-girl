@@ -48,13 +48,10 @@ window.TACHES = {
   },
 
   boutures: {
-    jour: [
-      { id: "bou-niveau", texte: "Vérifier le niveau d'eau : les nœuds doivent rester immergés" }
-    ],
+    jour: [],
     semaine: [
-      { id: "bou-eau-begonia", texte: "Changer l'eau des boutures de bégonia", fois: 2 },
-      { id: "bou-eau-pothos", texte: "Changer l'eau des boutures de pothos et rincer les verres" },
-      { id: "bou-pourries", texte: "Retirer toute bouture molle ou noircie" }
+      { id: "bou-eau-toutes", texte: "Changer l'eau de toutes les boutures et rincer les verres", fois: 2 },
+      { id: "bou-pourries", texte: "Retirer toute bouture molle ou noircie", fois: 2 }
     ]
   }
 };
