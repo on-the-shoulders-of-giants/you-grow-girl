@@ -298,21 +298,11 @@ p {
   display: grid;
   grid-template-columns: 6.5rem minmax(0, 1fr);
   grid-template-areas:
-    "motif motif"
     "photo infos"
     "taches taches";
   gap: 1rem 1.25rem;
-  padding: 0 0 2.25rem;
-}
-
-.ligne + .ligne {
-  padding-top: 0;
-}
-
-.ligne .motif {
-  grid-area: motif;
-  height: 0.9rem;
-  border-radius: 0.3rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--ligne);
 }
 
 .ligne-photo {
@@ -383,10 +373,10 @@ p {
 
 @media (min-width: 48rem) {
   .ligne {
-    grid-template-columns: 0.75rem 9rem minmax(0, 1fr);
+    grid-template-columns: 9rem minmax(0, 1fr);
     grid-template-areas:
-      "motif photo infos"
-      "motif photo taches";
+      "photo infos"
+      "photo taches";
     gap: 1.25rem 1.75rem;
     padding: 2.25rem 0;
     border-top: 1px solid var(--ligne);
@@ -395,17 +385,12 @@ p {
   .ligne + .ligne {
     padding-top: 2.25rem;
   }
-
-  .ligne .motif {
-    height: auto;
-    border-radius: 0.375rem;
-  }
 }
 
 @media (min-width: 68rem) {
   .ligne {
-    grid-template-columns: 0.75rem 10.5rem minmax(0, 1fr) minmax(19rem, 24rem);
-    grid-template-areas: "motif photo infos taches";
+    grid-template-columns: 10.5rem minmax(0, 1fr) minmax(19rem, 24rem);
+    grid-template-areas: "photo infos taches";
     gap: 2.25rem;
   }
 
