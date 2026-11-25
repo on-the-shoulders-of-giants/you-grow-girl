@@ -28,8 +28,7 @@ window.TACHES = {
     semaine: [
       { id: "beg-terre", texte: "Enfoncer une baguette dans la terre et n'arroser que si les 2 à 3 premiers cm sont secs" },
       { id: "beg-mortes", texte: "Retirer les feuilles mortes ou abîmées" },
-      { id: "beg-tuteur", texte: "Vérifier que le tuteur tient les tiges" },
-      { id: "beg-tourner", texte: "Tourner le pot d'un quart de tour" }
+      { id: "beg-tuteur", texte: "Vérifier que le tuteur tient les tiges" }
     ]
   },
 
